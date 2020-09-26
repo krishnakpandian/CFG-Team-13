@@ -12,7 +12,7 @@ const GraphComponent = (props) => {
           {
             yAxisID: 'y-axis-2',
             xAxisID: 'first-x-axis',
-            backgroundColor: 'rgba(75,192,192,1)',
+            backgroundColor: ["#421C52", "teal"],
             borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
             data: [props.data.quinnYTP, props.data.otherYTP]
@@ -25,7 +25,7 @@ const GraphComponent = (props) => {
           {
             yAxisID: 'first-y-axis',
             xAxisID: 'first-x-axis',
-            backgroundColor: 'rgba(75,192,192,1)',
+            backgroundColor: ["#421C52", "teal"],
             borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
             data: [props.data.quinnASD, props.data.otherASD]
@@ -58,8 +58,11 @@ const GraphComponent = (props) => {
                 yAxes: [{
                     id: 'y-axis-2',
                     type: 'linear',
+                    gridLines: {
+                      color: "white"
+                    },
                     ticks : {
-                        fontColor: "black",
+                        fontColor: "white",
                         fontSize: 14,
                         min: 0,
                         max: 30
@@ -68,7 +71,7 @@ const GraphComponent = (props) => {
                 xAxes : [{
                   id: 'first-x-axis',
                   ticks : {
-                    fontColor: "black",
+                    fontColor: "white",
                     fontSize: 14
                   }
                 }],
@@ -92,14 +95,18 @@ const GraphComponent = (props) => {
             text:'Total Debt',
             fontSize:20
           },
+          
           scales: {
             yAxes: [{
                 id: 'first-y-axis',
                 type: 'linear',
+                gridLines: {
+                  color: "white"
+                },
                 ticks : {
                     min: 0,
                     max: 150000,
-                    fontColor: "black",
+                    fontColor: "white",
                     stepSize: 3000,
                     fontSize: 14
                 },
@@ -108,7 +115,7 @@ const GraphComponent = (props) => {
             xAxes : [{
               id: 'first-x-axis',
               ticks : {
-                fontColor: "black",
+                fontColor: "white",
                 fontSize: 14
               }
             }],
