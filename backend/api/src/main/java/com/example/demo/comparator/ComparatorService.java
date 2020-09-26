@@ -1,6 +1,8 @@
 package com.example.demo.comparator;
 
 
+import java.text.DecimalFormat;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -49,6 +51,12 @@ public class ComparatorService {
 		Integer yearsToPayOther     = (int) Math.ceil(totalCostOther / yearlyRate);
 		
 		Double monthlyRate          = yearlyRate / 12;
+		
+		// round to two decimal point
+		DecimalFormat df = new DecimalFormat("#.##");      
+		monthlyRate = Double.valueOf(df.format(monthlyRate)); 
+		totalCostOther = Double.valueOf(df.format(totalCostOther));
+		totalCostPQ = Double.valueOf(df.format(totalCostPQ));
 		
 		
 		returnDto.setMonthlyRate(monthlyRate);

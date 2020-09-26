@@ -1,14 +1,32 @@
-
+.body {
+    background-color: "#676767";
+}
 .costs-container{
-    width: 25%;
-    margin: 5%;
+    width: 20%;
+    margin: 2%;
+    padding: 0;
     color: white;
     float: left;
 }
 .box{
     margin-bottom: 20px;
 }
+
 .graph {
     float: left;
     height: 75%;
+    width: 50%;
 }
+.info {
+    float: right;
+    color: white;
+    margin: 5%;
+    width: 15%;
+}
+a{
+    margin-bottom: 10px;
+}
+
+.body{
+    width: 100%;
+  }

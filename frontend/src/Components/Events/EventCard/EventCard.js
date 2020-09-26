@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from '../../Image/Image'
 
 
+
 const Events = (event) => {
 
     return(

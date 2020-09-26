@@ -27,7 +27,8 @@ function App() {
         </Route>
         <Route exact path="/initiative">
         <Fade down delay={300} distance={"0.5em"}>
-          <Events/>
+          <Events>
+          </Events>
         </Fade>
         </Route>
         <Route exact path="/cost">

@@ -2,9 +2,9 @@
   text-align: center;
   background-color: black;
 }
-body {
+.body {
   min-height: 70vh;
-  background-color: black;
+  background-color: #676767;
 }
 .App-logo {
   height: 40vmin;

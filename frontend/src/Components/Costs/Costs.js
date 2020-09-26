@@ -128,11 +128,33 @@ const Costs = () => {
                     console.error('Error:', error);
                   })}>Calculate!</button>
                   </div>
-                  </div>
-            <div class = "graph">
-                  {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}
+                  Going to college is possible! <br/>
+                  <a href = "https://studentaid.gov/h/apply-for-aid/fafsa/">calculate fafsa here</a>
+                  <br/>
+                  <a href = "https://www.pqc.edu/financial-aid/">see scholarships here</a>
                   
-            </div>
+            
+            
+              </div>
+              
+            <div class = "graph">
+                  {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}  
+          </div>
+          <div class = "info">
+          { ready ? <div>
+                    You will spend {graphData.otherYTP} years
+                    paying off your debt if you attend the average 
+                    private college considering your projected 
+                    income and financial aid. Paul Quinn will 
+                    save you ${graphData.otherASD - graphData.quinnASD} in the long run. Still looking unachievable? Try work study
+                    or apply for one of our scholarships.
+                  </div>
+                  :
+                  <div>Enter your financial plans on the left side of the screen
+                    to see budgeting information and to compare Paul Quinn to other private
+                    institutions.</div>}
+          </div>
+             
         </React.Fragment>
     );
 }
