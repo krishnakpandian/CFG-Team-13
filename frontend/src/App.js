@@ -9,6 +9,7 @@ import Stories from './Components/Stories/Stories';
 import Events from './Components/Events/Events';
 import LargeEvent from './Components/LargeEvent/LargeEvent';
 import Fade from 'react-reveal/Fade'
+import Body from './Components/Body/Body';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
         </Route>
         <Route path="/">
         <Fade down delay={300} distance={"0.5em"}>
-          <h1>home page being built</h1>
+          <Body/>
         </Fade>
         </Route>
       </Switch>

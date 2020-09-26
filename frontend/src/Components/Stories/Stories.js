@@ -71,7 +71,7 @@ class Stories extends Component {
     return(
         <React.Fragment>
             <div class="story-container">
-                Personal Success Stories 
+                <div class="head">Personal Success Stories </div>
                 {this.state.storydata !== null && this.state.storydata.map((story) => {
                     return(
                         <StoryCard data={story}/>
