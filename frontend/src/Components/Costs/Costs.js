@@ -136,26 +136,25 @@ const Costs = () => {
             
             
               </div>
+              
             <div class = "graph">
-                  {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}
-            
-                  
+                  {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}  
           </div>
-          <div class = "info-container">
-              <div class = "info">
-            { ready ? <div>
+          <div class = "info">
+          { ready ? <div>
                     You will spend {graphData.otherYTP} years
-                    paying off your debt at the average 
+                    paying off your debt if you attend the average 
                     private college considering your projected 
                     income and financial aid. Paul Quinn will 
-                    save you ${graphData.otherASD - graphData.quinnASD}.00 
-                    in the long run. Still looking unachievable? Try work study
+                    save you ${graphData.otherASD - graphData.quinnASD} in the long run. Still looking unachievable? Try work study
                     or apply for one of our scholarships.
                   </div>
                   :
-                  <div>No Data</div>}
-              </div>
-            </div>
+                  <div>Enter your financial plans on the left side of the screen
+                    to see budgeting information and to compare Paul Quinn to other private
+                    institutions.</div>}
+          </div>
+             
         </React.Fragment>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './StoryCard.scss';
-
+import Image from '../../Image/Image';
 
 const StoryCard = (story) => {
     return(
@@ -12,6 +12,9 @@ const StoryCard = (story) => {
                     <div>{story.data.major}</div>
                     <div>{story.data.year}</div>
                     <div>Participated in {story.data.program !== "" ? story.data.program: "no"} Program</div>
+                </div>
+                <div class="profile">
+                    <img src= {Image(story.data.image)}/>
                 </div>
                 <div class="content">
                     {story.data.description}

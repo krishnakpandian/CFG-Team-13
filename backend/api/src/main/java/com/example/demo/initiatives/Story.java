@@ -76,6 +76,14 @@ public class Story {
 		this.year = year;
 	}
 
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	public String getProgram() {
 		return program;
 	}

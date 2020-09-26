@@ -1,48 +1,49 @@
 body {
     font-family: "Lato", sans-serif;
     font-size: 16px;
+    background-color: grey;
   }
   
-  .title {
-    font-size: 1.4em;
-    font-weight: 300;
-    color: white;
-  }
-  .info {
-    display: inline-flex;
-    width: 10%;
-    right: 0;
-  }
-  .bar-group .name-label {
+
+ 
+.bar-group .name-label {
     text-anchor: end;
     font-weight: 300;
     font-size: 1em;
     fill: #333;
-  }
+}
   
-  .bar-group .value-label {
+.bar-group .value-label {
     text-anchor: end;
     fill: #fff;
     font-weight: 900;
     font-size: 0.7em;
-  }
-.graphs {
-  height: 600px;
-  
 }
+
 .graph-container{
-  height: 75%;
+  height: 100vh;
+  .title {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: black;
+  }
+  .title {
+    color:white;
+  }
+  .graphs {
+    height: 600px;
+    .canvas{
+        height: 100% !important;
+    }
+    .graph1{
+        height: 50vh;
+        display: inline-flex;
+    }
+    .graph2{
+        height: 50vh;
+        display: inline-flex;  
+    }
+  }
 }
-.graph1{
-  height: 100%;
-  display: inline-flex;
-  
-}
-.graph2{
-  height: 100%;
-  display: inline-flex;
-  
-}
-.canvas{
-  height: 30% !important;
-}
+
+
