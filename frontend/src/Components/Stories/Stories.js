@@ -37,13 +37,13 @@ const Stories = () => {
                 }) }
             </div>
             <div class="fields">
-                <div>Name<input type= "text" value = {name ? name: ''} onChange={event => setName(event.target.value)}/> </div>
-                <div>Position<input type= "text" value = {position ? position: ''} onChange={event => setPosition(event.target.value)}/> </div>
-                <div>Major<input type= "text" value = {major ? major: ''} onChange={event => setMajor(event.target.value)}/> </div>
-                <div>Year<input type= "text" value = {year ? year: ''} onChange={event => setYear(event.target.value)}/> </div>
-                <div>Program<input type= "text" value = {program ? program: ''} onChange={event => setProgram(event.target.value)}/> </div>
-                <div>Image<input type= "text" value = {image ? image: ''} onChange={event => setImage(event.target.value)}/> </div>
-                <button onClick = {submitData}></button>
+                <div className = "data">Name</div> <input type= "text" size="30" value = {name ? name: ''} onChange={event => setName(event.target.value)}/>
+                <div className = "data">Position</div> <input type= "text" size="30" value = {position ? position: ''} onChange={event => setPosition(event.target.value)}/> 
+                <div className = "data">Major </div><input type= "text"size="30" value = {major ? major: ''} onChange={event => setMajor(event.target.value)}/> 
+                <div className = "data">Year </div><input type= "text" size="30"value = {year ? year: ''} onChange={event => setYear(event.target.value)}/> 
+                <div className = "data">Program</div> <input type= "text"size="30" value = {program ? program: ''} onChange={event => setProgram(event.target.value)}/> 
+                <div className = "data">Image</div> <input type= "text" size="30"value = {image ? image: ''} onChange={event => setImage(event.target.value)}/> 
+                <div className = "data"></div><button onClick = {submitData}>Submit</button>
             </div>
         </React.Fragment>
     );

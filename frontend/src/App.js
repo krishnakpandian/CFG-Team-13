@@ -5,7 +5,7 @@ import { HashRouter as Router, Switch, Route, Redirect, Link} from "react-router
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Initiative from './Components/Initiative/Initiative';
-import Costs from './Components/Initiative/Initiative';
+import Costs from './Components/Costs/Costs';
 import Stories from './Components/Stories/Stories';
 import Events from './Components/Events/Events';
 
@@ -24,13 +24,13 @@ function App() {
           <Stories/>
         </Route>
         <Route exact path="/initiative">
-          <Initiative/>
+          <Events/>
         </Route>
         <Route exact path="/cost">
           <Costs/>
         </Route>
         <Route path="/">
-          <Events/>
+          <h1>home page being built</h1>
         </Route>
       </Switch>
     </Router>
