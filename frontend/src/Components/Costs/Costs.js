@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Costs.scss';
 import GraphComponent from './GraphComponent/GraphComponent';
-//import BarChart from 'react-bar-chart'; //npm install react-bar-chart
+
 
 
 const JOB_LIST = [{value: 1, viewValue: "Biology"},
@@ -104,13 +104,14 @@ const Costs = () => {
                   .then(data => {
                     console.log('Success:', data);
                     setGraphReady(true);
-                    setGraphData(data)
+                    setGraphData(data);
+                    console.log(graphData);
                   })
                   .catch((error) => {
                     console.error('Error:', error);
                   })}></button>
 
-                  {setGraphReady ? <GraphComponent/>: null}
+                  {setGraphReady ? <GraphComponent data={graphData}/>: null}
 
             </div>
         </React.Fragment>
