@@ -61,7 +61,8 @@ class Stories extends Component {
             },
           })
           .then(response => response.json())
-          .then(data => this.setState({storydata: data}));
+          .then(data => this.setState({storydata: data}))
+          .then(data => console.log(data));
     }
 
 
