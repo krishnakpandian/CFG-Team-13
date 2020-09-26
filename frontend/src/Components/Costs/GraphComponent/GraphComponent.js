@@ -128,28 +128,29 @@ const GraphComponent = (props) => {
        
       </div>
       <div class = "graph3">
-        <BubbleChart
+        <BubbleChart 
   graph= {{
-    zoom: .5,
+    zoom: .7,
     offsetX: .1,
     offsetY: -0.01,
   }}
-  width={700}
+  width={600}
+  align = {"center"}
   overflow={true}
   height={400}
   padding={0} // optional value, number that set the padding between bubbles
-  showLegend={false} // optional value, pass false to disable the legend.
+  showLegend={true} // optional value, pass false to disable the legend.
   legendPercentage={20} // number that represent the % of with that legend going to use.
   legendFont={{
         family: 'Arial',
         size: 12,
-        color: '#000',
-        weight: 'bold',
+        color: 'white',
+        weight: 'bold'
       }}
   labelFont={{
         family: 'Arial',
         size: 16,
-        color: '#fff',
+        color: 'black',
         weight: 'bold',
       }}
   valueFont={{
