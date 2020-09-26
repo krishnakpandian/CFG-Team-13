@@ -11,4 +11,6 @@ const Image = (imageName) => {
     return images[imageName];
 }
 
+
+
 export default Image;
