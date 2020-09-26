@@ -1,0 +1,25 @@
+.story-card-container {
+    width: 80vw;
+    height: 20vw;
+    border-radius: 50px;
+    background-color: #44105e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .attributes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 30vw;
+        .name {
+            font-size: 40px;
+        }
+    }
+    .content {
+        font-size:24px;
+        width: 30vw;
+    }
+    margin-bottom: 5vh;
+}
