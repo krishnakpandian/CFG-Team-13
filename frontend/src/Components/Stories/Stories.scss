@@ -19,3 +19,33 @@ div{
 button{
     border:black
 }
+.field {
+    width: 50%;
+    color: white;
+}
+#d {
+    display: inline-block;
+    width: 60%;
+}
+#d input{
+    height: 100px;
+    width: 100%;
+}
+.fields {
+    box-shadow: purple;
+    border: 2px white;
+    display: inline;
+    
+}
+.field {
+    border-radius: 25%;
+}
+.field1{
+    display: inline-flex;
+}
+.field2 {
+    display:inline-flex;
+}
+.button {
+    margin: 10px;
+}

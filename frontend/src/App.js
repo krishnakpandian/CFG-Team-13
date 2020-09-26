@@ -8,6 +8,7 @@ import Initiative from './Components/Initiative/Initiative';
 import Costs from './Components/Costs/Costs';
 import Stories from './Components/Stories/Stories';
 import Events from './Components/Events/Events';
+import LargeEvent from './Components/LargeEvent/LargeEvent';
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
     <Router>
       <Header/>
       <Switch>
-        <Route exact path="/comment" >
-          Routing
+        <Route exact path="/comment/:id" >
+          <LargeEvent/>
         </Route>
         <Route exact path="/stories" >
           <Stories/>

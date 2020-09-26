@@ -5,26 +5,6 @@ import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const Events = (event) => {
-    const [comment,setComment] = useState('');
-    
-    const onChange = e => {
-        setComment(e.target.value);
-    };
-    const submitComment = e => {
-
-        fetch("", {
-            method: "GET",
-            dataType: "JSON",
-            headers: {
-                "Content-Type": "application/json; charset=utf-8"
-            },
-            body: {"comment": comment}
-        })
-        .then(resp => {
-            return resp.json();
-        });
-
-    }
 
     return(
         <React.Fragment>
@@ -40,10 +20,6 @@ const Events = (event) => {
                     <Card.Img variant="bottom" src="holder.js/100px180" />
                 </Card>
                 </Link>
-                <div class="comment">
-                    <input type="text" onChange= {e => onChange(e)}/>
-                    <button>GO</button>
-                </div>
 
             </div>
         </React.Fragment>
