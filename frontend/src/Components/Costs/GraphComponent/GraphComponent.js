@@ -52,7 +52,7 @@ const GraphComponent = (props) => {
               maintainAspectRatio: false,
             title:{
               display:true,
-              text:'Time Spent Paying Off Student Loans',
+              text:'Years Paying Student Loans',
               fontColor: "#ffffff",
               backgroundColor: "#222222",
               fontSize:20
@@ -68,7 +68,8 @@ const GraphComponent = (props) => {
                         fontColor: "white",
                         fontSize: 14,
                         min: 0,
-                        max: 30
+                        max: 24,
+                        stepSize: 2
                     }
                 }],
                 xAxes : [{
