@@ -9,6 +9,8 @@ public class ComparatorReturnDto {
 	    
 	    private Double otherASD;
 	    
+	    private Double pay;
+	    
 	    private Integer quinnYTP;
 	    
 	    private Integer otherYTP;
@@ -53,6 +55,16 @@ public class ComparatorReturnDto {
 		public void setMonthlyRate(Double monthlyRate) {
 			this.monthlyRate = monthlyRate;
 		}
+
+		public Double getPay() {
+			return pay;
+		}
+
+		public void setPay(Double pay) {
+			this.pay = pay;
+		}
+
+		
 
 		
 	    

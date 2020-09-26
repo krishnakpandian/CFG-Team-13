@@ -1,7 +1,7 @@
 import React from 'react'
 import './GraphComponent.scss';
 import {Bar} from 'react-chartjs-2'; 
-
+import BubbleChart from '@weknow/react-bubble-chart-d3';
 const GraphComponent = (props) => {
     console.log(props);
     
@@ -33,10 +33,13 @@ const GraphComponent = (props) => {
         ]
       }
       const monthlyPayment = props.data.monthlyRate;
-
+      const pay = props.data.pay;
+      const quinnTotalDebt = props.data.quinnASD;
+      const otherTotalDebt = props.data.otherASD;
     return (
+
       <div class = "graph-container">
-        <div class = "title">Monthly Payment: ${monthlyPayment}</div>
+       <div class = "title">Monthly Payment: ${monthlyPayment}</div>
         <div class = "graphs">
           <div class = "graph1">
         <Bar
@@ -124,10 +127,49 @@ const GraphComponent = (props) => {
       />
        
       </div>
-      </div>
+      <div class = "graph3">
+        <BubbleChart
+  graph= {{
+    zoom: .5,
+    offsetX: .1,
+    offsetY: -0.01,
+  }}
+  width={700}
+  overflow={true}
+  height={400}
+  padding={0} // optional value, number that set the padding between bubbles
+  showLegend={false} // optional value, pass false to disable the legend.
+  legendPercentage={20} // number that represent the % of with that legend going to use.
+  legendFont={{
+        family: 'Arial',
+        size: 12,
+        color: '#000',
+        weight: 'bold',
+      }}
+  labelFont={{
+        family: 'Arial',
+        size: 16,
+        color: '#fff',
+        weight: 'bold',
+      }}
+  valueFont={{
+        family: 'Arial',
+        size: 0,
+        color: '#fff',
+        weight: 'bold',
+      }}
+  
+  
+  data={[
+    { label: 'Income', value:  pay},
+    { label: 'QC Debt', value: quinnTotalDebt },
+    { label: 'Average Debt', value: otherTotalDebt }
+  ]}
+/>
       
       </div>
-      
+      </div>
+      </div>
  
      
     );

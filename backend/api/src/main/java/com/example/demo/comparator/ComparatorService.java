@@ -59,6 +59,7 @@ public class ComparatorService {
 		totalCostPQ = Double.valueOf(df.format(totalCostPQ));
 		
 		
+		returnDto.setPay(pay);
 		returnDto.setMonthlyRate(monthlyRate);
 		returnDto.setOtherASD(totalCostOther);
 		returnDto.setQuinnASD(totalCostPQ);
