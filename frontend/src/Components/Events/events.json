@@ -1,0 +1,31 @@
+{
+    "events": [
+         {
+            "name": "Exemplary COVID-19 Response by Quinn College", 
+            "description": "Paul Quinn College announced that it will once again be a COVID-19 testing site. The college will begin testing from Saturday morning at 10 a.m at 3837 Simpson Stuart Road. Paul Quinn will be offering free testing from 10 a.m. to 4 p.m., as well as free food boxes and free face masks every day through Wednesday. The testing is open to everyone. There is no residency or COVID-19 symptoms requirement to be tested and all screenings are free. Test results should be received in two to four days.", 
+            "longdescription": "This is a larger description",
+            "image": "covid",
+            "comments": [],
+            "id": "iddd" 
+         },
+         {
+            "name": "Quinn College Providing Opportunities to Everyone", 
+            "description": " Through a partnership with the North Texas Food Bank.  The remainder is sold to community members, restaurants, and grocers throughout Dallas, to subsidize the farm's operational expenses. The highest profile customer is Legends Hospitality which services the Owners’ Suite at AT&T Stadium, home of the Dallas Cowboys.  In addition to providing fresh, healthy, affordable food options for its surrounding residents, the Farm strives to improve communities throughout the metroplex by providing hands-on educational experiences for youth and adults alike to promote healthy eating, improved food access, and environmental stewardship.  Come hear more about how the Farm is operated and maintained entirely by Paul Quinn student-employees, who actively engage in all farm activities, from business planning to marketing, and thus serves as a model of socially and environmentally-driven servant leadership and entrepreneurship.",
+            "longdescription": "This is a larger description",
+            "image": "diversity",
+            "comments": [],
+            "id": "ud" 
+         },
+         {
+            "name": "Quinn College Revolutionizing Environmental Initiatives", 
+            "description": "Paul Quinn College (Paul Quinn), GridMarket, EarthX and Environ Partners today announced a strategic plan to bring cost-effective energy procurement, valuable infrastructure upgrades, and renewable energy generation to the Paul Quinn campus. For the first phase, revised energy procurement and a 25-year solar power purchase agreement will enable the college to achieve energy and sustainability targets while driving increased revenue. The project was first conceptualized in 2018 when GridMarket conducted a comprehensive analysis of energy operations at the campus. GridMarket’s process includes the application of its data-driven artificial intelligence platform to remotely survey properties for distributed energy opportunities. The platform produces customized energy recommendations based on the unique priorities of a property or portfolio. For Paul Quinn, GridMarket provided the framework for an optimized energy strategy and, with local solar development firm, Go Big Solar, helped the college select vendors through its competitive marketplace to cost-effectively address energy and infrastructure needs.",
+            "longdescription": "This is a larger description",
+            "image": "environment",
+            "comments": [],
+            "id": "o" 
+         }
+    ]
+}
+
+
+

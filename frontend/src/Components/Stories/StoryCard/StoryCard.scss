@@ -1,0 +1,54 @@
+.story-card-container {
+    width: 80vw;
+    height: 20vw;
+    border-radius: 50px;
+    background-color: #44105e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .attributes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 30vw;
+        .name {
+            font-size: 5vh;
+        }
+    }
+    .profile {
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50px;
+        }
+    }
+    .content {
+        font-size:1.25vw;
+        width: 30vw;
+    }
+    margin-bottom: 5vh;
+}
+
+
+@media screen and (max-width: 768px) {
+    .story-card-container {
+        .attributes {
+
+            text-align: right;
+            font-size: 1vw;
+            .name {
+                font-size: 2vw;
+            }
+        }
+        .content {
+            font-size:1vw;
+            width: 30vw;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+}
