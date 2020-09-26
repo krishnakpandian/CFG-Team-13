@@ -1,7 +1,8 @@
 
 .costs-container{
-    width: 25%;
-    margin: 5%;
+    width: 20%;
+    margin: 2%;
+    padding: 0;
     color: white;
     float: left;
 }
@@ -11,4 +12,16 @@
 .graph {
     float: left;
     height: 75%;
+    width: 50%;
 }
+a{
+    margin-bottom: 10px;
+}
+.info {
+    display: inline-flex;
+    width: 10%;
+    right: 0;
+  }
+.body{
+    width: 100%;
+  }

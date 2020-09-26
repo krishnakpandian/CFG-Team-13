@@ -6,8 +6,13 @@ body {
   .title {
     font-size: 1.4em;
     font-weight: 300;
+    color: white;
   }
-  
+  .info {
+    display: inline-flex;
+    width: 10%;
+    right: 0;
+  }
   .bar-group .name-label {
     text-anchor: end;
     font-weight: 300;
@@ -23,6 +28,7 @@ body {
   }
 .graphs {
   height: 600px;
+  
 }
 .graph-container{
   height: 75%;
@@ -30,12 +36,13 @@ body {
 .graph1{
   height: 100%;
   display: inline-flex;
+  
 }
 .graph2{
   height: 100%;
   display: inline-flex;
+  
 }
 .canvas{
-  height: 40% !important;
-  color: white;
+  height: 30% !important;
 }

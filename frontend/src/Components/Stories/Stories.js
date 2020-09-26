@@ -3,7 +3,7 @@ import './Stories.scss';
 import stories from './story.json';
 import StoryCard from './StoryCard/StoryCard';
 
-const Stories = async () => {
+const Stories = () => {
     const [name, setName] = useState('');
     const [position, setPosition] = useState('');
     const [major, setMajor] = useState('');
@@ -41,7 +41,7 @@ const Stories = async () => {
     }
 
     const [storydata, setStoryData] = useState(null);
-    await fetch('http://localhost:8080/v1/api/stories/', {
+    fetch('http://localhost:8080/v1/api/stories/', {
         method: 'GET', 
         headers: {
           'Content-Type': 'application/json'

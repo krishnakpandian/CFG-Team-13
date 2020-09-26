@@ -56,6 +56,7 @@ const Costs = () => {
     const [graphData, setGraphData] = useState('');
     return(
         <React.Fragment>
+          <div class = "body">
             <div class="costs-container">
                 <div class = "box">
                   Major <br/>
@@ -128,11 +129,30 @@ const Costs = () => {
                     console.error('Error:', error);
                   })}>Calculate!</button>
                   </div>
+                  Going to college is possible! <br/>
+                  <a href = "https://studentaid.gov/h/apply-for-aid/fafsa/">calculate fafsa here</a>
+                  <br/>
+                  <a href = "https://www.pqc.edu/financial-aid/">see scholarships here</a>
                   </div>
+            <div class = "info">
+            { ready ? <div>
+                    You will spend {graphData.otherYTP} years
+                    paying off your debt at the average 
+                    private college considering your projected 
+                    income and financial aid. Paul Quinn will 
+                    save you ${graphData.otherASD - graphData.quinnASD}.00 
+                    in the long run. Still looking unachievable? Try work study
+                    or apply for one of our scholarships.
+                  </div>
+                  :
+                  <div>No Data</div>}
+            </div>
             <div class = "graph">
                   {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}
+            
                   
             </div>
+          </div>
         </React.Fragment>
     );
 }

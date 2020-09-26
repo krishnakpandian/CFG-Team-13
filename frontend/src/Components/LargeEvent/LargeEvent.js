@@ -39,15 +39,15 @@ const LargeEvent = async ({ match, location }) => {
           });
   
     }
-     
+
     return(
         <React.Fragment>
             <div class="LargeEvent-container">
 
-            <div class="comment">
-                <input type="text" onChange= {e => onChange(e)}/>
-            <button>GO</button>
-        </div>
+                <div class="comment">
+                    <input type="text" onChange= {e => onChange(e)}/>
+                    <button onClick={submitComment}>GO</button>
+                </div>
             </div>
         </React.Fragment>
     );

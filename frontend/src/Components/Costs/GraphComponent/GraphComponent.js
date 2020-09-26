@@ -11,7 +11,6 @@ const GraphComponent = (props) => {
         datasets: [
           {
             yAxisID: 'first-y-axis',
-            label: 'Yrs',
             backgroundColor: 'rgba(75,192,192,1)',
             borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
@@ -23,7 +22,6 @@ const GraphComponent = (props) => {
         labels: ['Paul Quinn', 'National Average'],
         datasets: [
           {
-            label: '$',
             yAxisID: 'first-y-axis',
             backgroundColor: 'rgba(75,192,192,1)',
             borderColor: 'rgba(0,0,0,1)',
@@ -32,7 +30,7 @@ const GraphComponent = (props) => {
           }
         ]
       }
-      const monthlyPayment = props.data.monthlyPayment;
+      const monthlyPayment = props.data.monthlyRate;
 
     return (
       <div class = "graph-container">
@@ -42,11 +40,16 @@ const GraphComponent = (props) => {
         <Bar
           data={timeToPayDebt}
           options={{
+            legend: {
+              display: false
+            },
               responsive: true,
               maintainAspectRatio: false,
             title:{
               display:true,
               text:'Time Spent Paying Off Student Loans',
+              fontColor: "#ffffff",
+              backgroundColor: "#222222",
               fontSize:20
             },
             scales: {
@@ -59,10 +62,6 @@ const GraphComponent = (props) => {
                     },
                     beginAtZero: true
                 }]
-            },
-            legend:{
-              display:true,
-              position:'right'
             }
           }}
         />
@@ -72,9 +71,13 @@ const GraphComponent = (props) => {
         data={totalDebt}
         
         options={{
+          legend: {
+            display: false,
+        },
           responsive: true,
           maintainAspectRatio: false,
           title:{
+            fontColor: "#ffffff",
             display:true,
             text:'Total Debt',
             fontSize:20
@@ -89,16 +92,25 @@ const GraphComponent = (props) => {
                 },
                 beginAtZero: true
             }]
-        },
-          legend:{
-            display:true,
-            position:'right'
-          }
+        }
         }}
       />
+       
       </div>
       </div>
+      <div class = "info">
+       You will spend {props.data.otherYTP} 
+       paying off your debt at the average 
+       private college considering your projected 
+       income and financial aid. Paul Quinn will 
+       save you ${props.data.otherASD - props.data.quinnASD}.00 
+       in the long run. Still looking unachievable? Try work study
+       or apply for one of our scholarships.
+     </div>
       </div>
+      
+ 
+     
     );
 }
 
