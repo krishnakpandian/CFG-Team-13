@@ -3,6 +3,8 @@ import './EventCard.scss';
 import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import Image from '../../Image/Image'
+
 
 const Events = (event) => {
 
@@ -17,7 +19,7 @@ const Events = (event) => {
                         {event.data.description}
                     </Card.Text>
                     </Card.Body>
-                    <Card.Img variant="bottom" src="holder.js/100px180" />
+                    <Card.Img variant="bottom" src={Image(event.data.image)} />
                 </Card>
                 </Link>
 
