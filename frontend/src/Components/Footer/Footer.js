@@ -7,6 +7,7 @@ const Footer = () => {
         <React.Fragment>
             <div class="footer-container">
                 Footer Renders
+                
             </div>
         </React.Fragment>
     );

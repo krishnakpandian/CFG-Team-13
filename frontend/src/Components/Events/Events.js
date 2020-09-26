@@ -3,10 +3,6 @@ import './Events.scss';
 import events from './events.json';
 import EventCard from './EventCard/EventCard';
 
-
-
-
-
 const Events = () => {
     return(
         <React.Fragment>
