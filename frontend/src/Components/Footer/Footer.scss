@@ -7,18 +7,20 @@
 
 .footer-container {
     background-color: #212329;
-    padding-bottom: 4rem;
+    padding-bottom: 1.1rem;
 }
 
 .footer {
     width: 80%;
-    height: 20vh;
+    height: 15vh;
     background-color: #212329;
     color: #ffffff;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    font-size: 60%;
+    bottom:0;
 }
 
 .footer-heading {
