@@ -68,7 +68,7 @@ const Costs = () => {
                 </select>
                 </div>
                 <div class = "box">
-                  Projected Fafsa Grants
+                  Projected Annual FAFSA Grants 
                   <br/>
                 <select value = {fafsa} onChange= {e=> setFafsa(e.target.value)}>
                     {FAFSA_LIST.map((fafsa) => {
@@ -79,7 +79,7 @@ const Costs = () => {
                 </select>
                 </div>
                 <div class = "box">
-                  Percentage of Income Paid to Loans <br/>
+                  Percentage of Income Paid to Loans Post Graduation <br/>
                 <select value = {loans} onChange= {e=> setLoans(e.target.value)}>
                 {LOAN_LIST.map((loan) => {
                     return(
