@@ -19,30 +19,32 @@ import {
   } from "react-share";
 
 const Events = (event) => {
-
+    var url='https://www.facebook.com/'
     return(
         <React.Fragment>
             <div class="event-card-container">
-            <Link to={`/comment?id=${event.data.id}`}>
                 <Card>
+                    <Link to={`/comment?id=${event.data.id}`}>
                     <Card.Header>{event.data.name}</Card.Header>
+                    </Link>
                     <Card.Body>
                     <Card.Text>
                         {event.data.description}
                         <div class = "share">
                         <div>
                             Share Now:
-                            </div>
-                        <FacebookIcon size={32} round={true} />
-                        <LinkedinIcon size={32} round={true} />
-                        <TwitterIcon size={32} round={true} />
-                        <RedditIcon  size={32} round={true} />
+                        </div>
+                        
+                        <a href="#" ><FacebookIcon size={32} round={true}  title={event.data.name} /></a>
+                        <a href="#" ><TwitterIcon size={32} round={true}  title={event.data.name} /></a>
+                        <a href="#" ><LinkedinIcon size={32} round={true}  title={event.data.name} /></a>
+                        <a href="#" ><RedditIcon size={32} round={true}  title={event.data.name} /></a>
                         </div>
                     </Card.Text>
                     </Card.Body>
                     <Card.Img variant="bottom" src={Image(event.data.image)} />
                     </Card>
-                </Link>
+
                 
 
             </div>
