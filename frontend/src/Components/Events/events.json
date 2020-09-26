@@ -4,18 +4,21 @@
             "name": "event 1", 
             "description": "This is description 1",
             "image": "",
+            "comments": [],
             "id": "iddd" 
          },
          {
             "name": "event 2", 
             "description": "This is description 2",
             "image": "",
+            "comments": [],
             "id": "ud" 
          },
          {
             "name": "event 3", 
             "description": "This is description 3",
             "image": "",
+            "comments": [],
             "id": "o" 
          }
     ]

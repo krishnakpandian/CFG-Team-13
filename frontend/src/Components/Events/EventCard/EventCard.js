@@ -39,11 +39,12 @@ const Events = (event) => {
                     </Card.Body>
                     <Card.Img variant="bottom" src="holder.js/100px180" />
                 </Card>
+                </Link>
                 <div class="comment">
                     <input type="text" onChange= {e => onChange(e)}/>
                     <button></button>
                 </div>
-                </Link>
+
             </div>
         </React.Fragment>
     );
