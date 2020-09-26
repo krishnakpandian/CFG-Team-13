@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
 import './Header.scss';
 
 
@@ -7,7 +6,7 @@ const Header = () => {
     return(
         <React.Fragment>
             <div class="header-container">
-            
+                Header Renders
             </div>
         </React.Fragment>
     );

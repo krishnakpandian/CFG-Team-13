@@ -6,7 +6,7 @@ const Stories = () => {
     return(
         <React.Fragment>
             <div class="stories-container">
-            
+                Stories Renders
             </div>
         </React.Fragment>
     );

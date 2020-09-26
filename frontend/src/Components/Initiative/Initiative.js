@@ -6,7 +6,7 @@ const Initiative = () => {
     return(
         <React.Fragment>
             <div class="initiative-container">
-            
+                Initiative Renders
             </div>
         </React.Fragment>
     );

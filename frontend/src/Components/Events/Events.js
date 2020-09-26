@@ -6,7 +6,7 @@ const Events = () => {
     return(
         <React.Fragment>
             <div class="events-container">
-            
+                Events Renders
             </div>
         </React.Fragment>
     );
