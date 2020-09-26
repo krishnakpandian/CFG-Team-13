@@ -58,26 +58,26 @@ const Costs = () => {
         <React.Fragment>
             <div class="costs-container">
                 Cost Renders
-                <select>
+                <select value = {job} onChange= {e => setJobs(e.target.value)}>
                     {JOB_LIST.map((job) => {
                         return(
-                          <option onClick={e => setJobs(job.value)}> {job.viewValue}</option>  
+                          <option value={job.value}> {job.viewValue}</option>  
                         );
                     })}
                 </select>
 
-                <select>
+                <select value = {fafsa} onChange= {e=> setFafsa(e.target.value)}>
                     {FAFSA_LIST.map((fafsa) => {
                         return(
-                          <option onClick={e => setFafsa(fafsa.value)}> {fafsa.viewValue}</option>  
+                          <option value = {fafsa.value} > {fafsa.viewValue}</option>  
                         );
                     })}
                 </select>
 
-                <select>
+                <select value = {loans} onChange= {e=> setLoans(e.target.value)}>
                 {LOAN_LIST.map((loan) => {
                     return(
-                      <option onClick={e => setLoans(loan.value)}> {loan.viewValue}</option>  
+                      <option value = {loan.value}> {loan.viewValue}</option>  
                     );
                 })}
                 </select>
@@ -85,34 +85,34 @@ const Costs = () => {
                 <label for="true">Yes</label>
                 <input type="radio"  name="false" value='false' checked ={workStudy === false} onChange={e => setWork(false)}/>
                 <label for="false">No</label>
-                <select>
+                <select value = {scholarship} onChange= {e=> setScholarship(e.target.value)}>
                 {SCHOLARSHIP_LIST.map((scholarship) => {
                     return(
-                      <option onClick={e => setScholarship(scholarship.value)}> {scholarship.viewValue}</option>  
+                      <option value={scholarship.value}> {scholarship.viewValue}</option>  
                     );
                 })}
+
+
                 </select>
-                <button onClick= { e =>   
+                <button onClick= { e =>  
                     fetch('http://localhost:8080/v1/api/calculate/', {
                     method: 'POST', 
                     headers: {
-                      'Content-Type': 'application/json',
+                      'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({"fafsa": fafsa, "workStudy": workStudy, "majorId":job, "loan": loans, "scholarship": scholarship }),
                   })
                   .then(response => response.json())
                   .then(data => {
-                    console.log('Success:', data);
+                    console.log(JSON.stringify({"fafsa": fafsa, "workStudy": workStudy, "majorId":job, "loan": loans, "scholarship": scholarship }))
                     setGraphReady(true);
                     setGraphData(data);
-                    console.log(graphData);
                   })
                   .catch((error) => {
                     console.error('Error:', error);
                   })}></button>
-
-                  {setGraphReady ? <GraphComponent data={graphData}/>: null}
-
+                  {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}
+                  
             </div>
         </React.Fragment>
     );
