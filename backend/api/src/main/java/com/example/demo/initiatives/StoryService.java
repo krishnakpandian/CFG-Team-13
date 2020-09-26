@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.initiatives;
 
 import java.util.List;
 
@@ -7,18 +7,18 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class Endpoints {
+public class StoryService {
 	
-	@Autowired Repository repo;
+	@Autowired StoryRepository repo;
 	
-	public List<TestEntity> getEntities() {
+	public List<Story> getStories() {
 
-		List<TestEntity> list = repo.findAll();
+		List<Story> list = repo.findAll();
 		return list;
 
 	}
 	
-	public TestEntity addEntity(TestEntity entity) {
+	public Story postEntity(Story entity) {
 		return repo.save(entity);
 	}
 	

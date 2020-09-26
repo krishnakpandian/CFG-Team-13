@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.initiatives;
 
 
 import java.util.List;
@@ -17,34 +17,32 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping(path = "/v1/api")
-public class Controller {
+@RequestMapping(path = "/v1/api/stories")
+public class StoryController {
 
 
 	@Autowired
-	private Endpoints service;
+	private StoryService service;
 
-	@GetMapping(path="/getAll" , produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<TestEntity>> getAll() {
-		
-		List<TestEntity> entities = service.getEntities();
-
+	@GetMapping(path="/" , produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<Story>> getAll() {
+		List<Story> entities = service.getStories();
 		return new ResponseEntity<>(entities, HttpStatus.OK);
 	}
+	
 	//--------------------------------------------------------------------------------------------------------	
 
-	@PostMapping(path="/create" , produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<TestEntity> postEntity(@RequestBody TestEntity entity) {
-		TestEntity saved = service.addEntity(entity);
-
+	@PostMapping(path="/" , produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Story> postEntity(@RequestBody Story entity) {
+		Story saved = service.postEntity(entity);
 		return new ResponseEntity<>(saved, HttpStatus.CREATED);
 	}
+	
 	//--------------------------------------------------------------------------------------------------------	
 
-		@PostMapping(path="/delete/{id}" , produces=MediaType.APPLICATION_JSON_VALUE)
-		public ResponseEntity<TestEntity> deleteEntity(@PathVariable Integer id) {
-			service.deleteEntity(id);
-
-			return new ResponseEntity<>(HttpStatus.OK);
-		}
+	@PostMapping(path="/delete/{id}" , produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Story> deleteEntity(@PathVariable Integer id) {
+		service.deleteEntity(id);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
 }
