@@ -12,15 +12,14 @@ import Events from './Components/Events/Events';
 function App() {
   return (
     <div className="App">
-    <Header/>
+
 
     <Router>
-    <Link to="/">Home</Link><br/>
-    <Link to="/cost">Costs</Link><br/>
-    <Link to="/initiative">Initiative</Link><br/>
-    <Link to="/stories">Stories</Link><br/>
-
+      <Header/>
       <Switch>
+        <Route exact path="/comment" >
+          Routing
+        </Route>
         <Route exact path="/stories" >
           <Stories/>
         </Route>
