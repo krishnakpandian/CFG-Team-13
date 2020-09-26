@@ -24,13 +24,13 @@ function App() {
           <Stories/>
         </Route>
         <Route exact path="/initiative">
-          <Initiative/>
+          <Events/>
         </Route>
         <Route exact path="/cost">
           <Costs/>
         </Route>
         <Route path="/">
-          <Events/>
+          <h1>home page being built</h1>
         </Route>
       </Switch>
     </Router>
