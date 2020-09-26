@@ -56,7 +56,6 @@ const Costs = () => {
     const [graphData, setGraphData] = useState('');
     return(
         <React.Fragment>
-          <div class = "body">
             <div class="costs-container">
                 <div class = "box">
                   Major <br/>
@@ -133,8 +132,17 @@ const Costs = () => {
                   <a href = "https://studentaid.gov/h/apply-for-aid/fafsa/">calculate fafsa here</a>
                   <br/>
                   <a href = "https://www.pqc.edu/financial-aid/">see scholarships here</a>
-                  </div>
-            <div class = "info">
+                  
+            
+            
+              </div>
+            <div class = "graph">
+                  {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}
+            
+                  
+          </div>
+          <div class = "info-container">
+              <div class = "info">
             { ready ? <div>
                     You will spend {graphData.otherYTP} years
                     paying off your debt at the average 
@@ -146,13 +154,8 @@ const Costs = () => {
                   </div>
                   :
                   <div>No Data</div>}
+              </div>
             </div>
-            <div class = "graph">
-                  {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}
-            
-                  
-            </div>
-          </div>
         </React.Fragment>
     );
 }
