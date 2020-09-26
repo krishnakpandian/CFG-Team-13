@@ -80,16 +80,16 @@ class Stories extends Component {
             </div> 
             <div class="fields">
             <div class = "field1">
-            <div class="field"><input placeholder = "name" type= "text" value = {this.state.name ? this.state.name: ''} onChange={event => this.setState({name:event.target.value})}/> </div>
-            <div class="field"><input placeholder = "program" type= "text" value = {this.state.position ? this.state.position: ''} onChange={event => this.setState({position:event.target.value})}/> </div>
-            <div class="field"><input placeholder = "major" type= "text" value = {this.state.major ? this.state.major: ''} onChange={event => this.setState({major:event.target.value})}/> </div>
+                <div class="field"><div>Name</div><input placeholder = "name" name="name" type= "text" value = {this.state.name ? this.state.name: ''} onChange={event => this.setState({name:event.target.value})}/> </div>
+                <div class="field"><div>Program</div><input placeholder = "program" name="program" type= "text" value = {this.state.position ? this.state.position: ''} onChange={event => this.setState({position:event.target.value})}/> </div>
+                <div class="field"><div>Major</div><input placeholder = "major" name="major" type= "text" value = {this.state.major ? this.state.major: ''} onChange={event => this.setState({major:event.target.value})}/> </div>
             </div>
             <div class = "field2">
-            <div class="field"><input placeholder = "year" type= "text" value = {this.state.year ? this.state.year: ''} onChange={event => this.setState({year:event.target.value})}/> </div>
-            <div class="field"><input placeholder = "position" type= "text" value = {this.state.program ? this.state.program: ''} onChange={event => this.setState({program:event.target.value})}/> </div>
-            <div class="field"><input placeholder = "image" type= "text" value = {this.state.image ? this.state.image: ''} onChange={event => this.setState({image:event.target.value})}/> </div>
+                <div class="field"><div>Year</div><input placeholder = "year" name="year" type= "text" value = {this.state.year ? this.state.year: ''} onChange={event => this.setState({year:event.target.value})}/> </div>
+                <div class="field"><div>Position</div><input placeholder = "position" name="position" type= "text" value = {this.state.program ? this.state.program: ''} onChange={event => this.setState({program:event.target.value})}/> </div>
+                <div class="field"><div>Image</div><input placeholder = "image" type= "text" name="image" value = {this.state.image ? this.state.image: ''} onChange={event => this.setState({image:event.target.value})}/> </div>
             </div>
-            <div class="field" id = "d"><input placeholder = "description" type= "text" value = {this.state.description ? this.state.description: ''} onChange={event => this.setState({description:event.target.value})}/> </div>
+            <div class="field" id = "d"><div>Description</div><input placeholder = "description" name="description" type= "text" value = {this.state.description ? this.state.description: ''} onChange={event => this.setState({description:event.target.value})}/> </div>
             </div>
             <div class = "button">
             <button onClick = {this.submitData}>Submit</button>

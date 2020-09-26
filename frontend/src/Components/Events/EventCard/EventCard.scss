@@ -1,6 +1,13 @@
 .event-card-container {
     width: 60vw;
     margin-bottom: 5vw;
+    a:hover {
+        border:none;
+        outline:none;
+        text-decoration:none;
+        color:inherit;
+        color: blue;
+    }
     .comment {
         input {
             width: 55vw;
