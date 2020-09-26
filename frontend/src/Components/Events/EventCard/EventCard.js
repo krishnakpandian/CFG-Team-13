@@ -42,7 +42,7 @@ const Events = (event) => {
                 </Link>
                 <div class="comment">
                     <input type="text" onChange= {e => onChange(e)}/>
-                    <button></button>
+                    <button>GO</button>
                 </div>
 
             </div>
@@ -51,3 +51,4 @@ const Events = (event) => {
 }
 
 export default Events;
+

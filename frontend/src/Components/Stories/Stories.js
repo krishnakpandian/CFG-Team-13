@@ -50,6 +50,7 @@ const Stories = () => {
                 }) }
             </div>
             <div class="fields">
+<<<<<<< HEAD
                 <div>Name<input type= "text" value = {name ? name: ''} onChange={event => setName(event.target.value)}/> </div>
                 <div>Position<input type= "text" value = {position ? position: ''} onChange={event => setPosition(event.target.value)}/> </div>
                 <div>Major<input type= "text" value = {major ? major: ''} onChange={event => setMajor(event.target.value)}/> </div>
@@ -59,6 +60,15 @@ const Stories = () => {
                 <div>Description<input type= "text" maxlength ={500} value = {image ? image: ''} onChange={event => setDescription(event.target.value)}/> </div>
                 <input type="file"></input>
                 <button onClick = {submitData}></button>
+=======
+                <div className = "data">Name</div> <input type= "text" size="30" value = {name ? name: ''} onChange={event => setName(event.target.value)}/>
+                <div className = "data">Position</div> <input type= "text" size="30" value = {position ? position: ''} onChange={event => setPosition(event.target.value)}/> 
+                <div className = "data">Major </div><input type= "text"size="30" value = {major ? major: ''} onChange={event => setMajor(event.target.value)}/> 
+                <div className = "data">Year </div><input type= "text" size="30"value = {year ? year: ''} onChange={event => setYear(event.target.value)}/> 
+                <div className = "data">Program</div> <input type= "text"size="30" value = {program ? program: ''} onChange={event => setProgram(event.target.value)}/> 
+                <div className = "data">Image</div> <input type= "text" size="30"value = {image ? image: ''} onChange={event => setImage(event.target.value)}/> 
+                <div className = "data"></div><button onClick = {submitData}>Submit</button>
+>>>>>>> 18b3ccc25d228b6a740dba6337af279e6ccd67a8
             </div>
         </React.Fragment>
     );
