@@ -57,7 +57,8 @@ const Costs = () => {
     return(
         <React.Fragment>
             <div class="costs-container">
-                Cost Renders
+                <div class = "box">
+                  Major <br/>
                 <select value = {job} onChange= {e => setJobs(e.target.value)}>
                     {JOB_LIST.map((job) => {
                         return(
@@ -65,7 +66,10 @@ const Costs = () => {
                         );
                     })}
                 </select>
-
+                </div>
+                <div class = "box">
+                  Projected Fafsa Grants
+                  <br/>
                 <select value = {fafsa} onChange= {e=> setFafsa(e.target.value)}>
                     {FAFSA_LIST.map((fafsa) => {
                         return(
@@ -73,7 +77,9 @@ const Costs = () => {
                         );
                     })}
                 </select>
-
+                </div>
+                <div class = "box">
+                  Percentage of Income Paid to Loans <br/>
                 <select value = {loans} onChange= {e=> setLoans(e.target.value)}>
                 {LOAN_LIST.map((loan) => {
                     return(
@@ -81,19 +87,29 @@ const Costs = () => {
                     );
                 })}
                 </select>
+                </div>
+                <div class = "box">
+                  Participate in Work Study <br/>
                 <input type="radio"  name="true" value='true' checked ={workStudy === true} onChange={e => setWork(true)}/>
                 <label for="true">Yes</label>
                 <input type="radio"  name="false" value='false' checked ={workStudy === false} onChange={e => setWork(false)}/>
                 <label for="false">No</label>
+                </div>
+
+                <div class = "box">
+                  Scholarships Awarded <br/>
                 <select value = {scholarship} onChange= {e=> setScholarship(e.target.value)}>
                 {SCHOLARSHIP_LIST.map((scholarship) => {
                     return(
                       <option value={scholarship.value}> {scholarship.viewValue}</option>  
                     );
                 })}
+                
 
 
                 </select>
+                </div>
+                <div class = "submit-button">
                 <button onClick= { e =>  
                     fetch('http://localhost:8080/v1/api/calculate/', {
                     method: 'POST', 
@@ -110,7 +126,10 @@ const Costs = () => {
                   })
                   .catch((error) => {
                     console.error('Error:', error);
-                  })}></button>
+                  })}>Calculate!</button>
+                  </div>
+                  </div>
+            <div class = "graph">
                   {ready ? <GraphComponent data={graphData}/>: <div>"No Data"</div>}
                   
             </div>

@@ -25,13 +25,16 @@ public class Story {
     private String major;
     
     @Column(name = "year")
-    private Integer year;
+    private String year;
     
     @Column(name = "program")
     private String program;
     
     @Column(name = "description")
     private String description;
+    
+    @Column(name = "image")
+    private String image;
 
 	public Integer getId() {
 		return id;
@@ -65,11 +68,11 @@ public class Story {
 		this.major = major;
 	}
 
-	public Integer getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	public void setYear(Integer year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 

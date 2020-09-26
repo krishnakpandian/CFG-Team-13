@@ -3,7 +3,8 @@ CREATE TABLE story (
     name varchar(50),
     position varchar(50),
     major varchar(50),
-    year integer,
+    year varchar(50),
     program varchar(50),
-    description varchar(500)
+    description varchar(500),
+    image varchar(50)
 );
