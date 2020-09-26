@@ -97,7 +97,7 @@ const Costs = () => {
                 </div>
 
                 <div class = "box">
-                  Scholarships Awarded <br/>
+                  Scholarships Awarded Annually <br/>
                 <select value = {scholarship} onChange= {e=> setScholarship(e.target.value)}>
                 {SCHOLARSHIP_LIST.map((scholarship) => {
                     return(
